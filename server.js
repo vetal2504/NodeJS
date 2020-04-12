@@ -1,6 +1,6 @@
 const http = require('http');
 
-const hostname = '172.18.0.10';
+const hostname = '0.0.0.0';
 const port = 3000;
 
 function between(min, max) {  
@@ -13,7 +13,8 @@ const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   var number = between(10, 200);
-  res.end(number + '\n');
+  res.end('Hello Natasha')
+//  res.end(number + '\n');
 });
 
 server.listen(port, hostname, () => {
